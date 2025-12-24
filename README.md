@@ -120,4 +120,4 @@ The project uses a **"Fire & Safety"** theme:
 
 ---
 
-© 2024 Fire Safety Department
+© 2025 Fire Safety Department
