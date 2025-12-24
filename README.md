@@ -178,8 +178,8 @@ The project uses a **"Fire & Safety"** theme:
 - **Colors**: Primary Red (`#d32f2f`), White, and Glass-like Translucency.
 - **Animations**: Fade-ins and smooth transitions for a premium feel.
 
-
 © 2025 Fire Safety Department
+
 
 ## RESULT
 The developed Real-Time Monitoring and Evaluation Software for Fire Department Applications successfully meets the objectives of automating fire safety application processing. The system provides a user-friendly web interface that allows applicants to register, submit fire safety NOC applications, and track application status in real time. All application data is securely stored and managed using an SQLite database, ensuring consistency and reliability.
