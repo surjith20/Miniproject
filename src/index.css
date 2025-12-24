@@ -1,0 +1,132 @@
+:root {
+  /* Red & White Theme - Light Mode */
+  --primary-color: #d32f2f;
+  /* Strong Fire Engine Red for visibility on white */
+  --primary-glow: rgba(211, 47, 47, 0.3);
+  --secondary-color: #ffcdd2;
+  /* Very light red */
+
+  --bg-dark: #ffffff;
+  /* White Background */
+  --bg-dark-secondary: #f8f9fa;
+  /* Light Gray */
+
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  /* Frosty White */
+  --glass-border: rgba(211, 47, 47, 0.2);
+  /* Subtle red border */
+  --glass-highlight: rgba(255, 255, 255, 1);
+
+  --text-white: #1a1a1a;
+  /* Dark text (mapped to 'text-white' var to reuse existing classes) */
+  --text-gray: #555555;
+
+  --success: #2e7d32;
+  --warning: #ed6c02;
+  --danger: #d32f2f;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-dark);
+  /* Very subtle red gradient on white */
+  background-image:
+    radial-gradient(circle at 10% 20%, rgba(255, 0, 0, 0.03) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(255, 0, 0, 0.03) 0%, transparent 40%);
+  color: var(--text-white);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Glassmorphism Utilities */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  /* Softer shadow */
+}
+
+/* Input Fields */
+.glass-input {
+  background: rgba(255, 255, 255, 1);
+  border: 1px solid #e0e0e0;
+  color: #333;
+  padding: 14px 18px;
+  border-radius: 12px;
+  outline: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.glass-input:focus {
+  border-color: var(--primary-color);
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(211, 47, 47, 0.1);
+}
+
+.glass-input::placeholder {
+  color: #999;
+}
+
+/* Buttons */
+.glass-btn {
+  background: var(--primary-color);
+  border: none;
+  color: white;
+  /* Actual white text on red button */
+  padding: 14px 28px;
+  border-radius: 14px;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 10px rgba(211, 47, 47, 0.3);
+}
+
+.glass-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(211, 47, 47, 0.4);
+  filter: brightness(1.1);
+}
+
+.glass-btn:active {
+  transform: scale(0.98);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d32f2f;
+  border-radius: 4px;
+}

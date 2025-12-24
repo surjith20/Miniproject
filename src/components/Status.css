@@ -1,0 +1,140 @@
+.status-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+  position: relative;
+}
+
+/* Red ambient glow for Status page */
+.status-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 20%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(211, 47, 47, 0.05) 0%, transparent 70%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.search-panel {
+  padding: 3rem;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  width: 100%;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+  border: 1px solid #eee;
+}
+
+.search-panel h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.search-form {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+}
+
+.search-form .glass-input {
+  width: 60%;
+  font-size: 1.1rem;
+  background: #f9f9f9;
+  color: #333;
+}
+
+.search-form .glass-btn {
+  padding: 0 2rem;
+}
+
+.error-text {
+  color: var(--danger);
+  margin-top: 1rem;
+  font-weight: 500;
+  background: rgba(211, 47, 47, 0.1);
+  padding: 0.5rem;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.status-content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.result-panel,
+.map-panel {
+  padding: 2rem;
+  height: fit-content;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  border: 1px solid #eee;
+}
+
+.status-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+}
+
+.status-header h3 {
+  color: var(--primary-color);
+  font-size: 1.4rem;
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.info-block label {
+  color: #777;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.info-block p {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.action-row {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.map-container {
+  margin-top: 1rem;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #eee;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 768px) {
+  .status-content-grid {
+    grid-template-columns: 1fr;
+  }
+}

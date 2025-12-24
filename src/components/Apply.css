@@ -1,0 +1,164 @@
+.apply-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.form-card {
+  padding: 3rem;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+}
+
+/* Subtle red accent glow behind */
+.form-card::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  background: var(--primary-color);
+  opacity: 0.05;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: 0;
+}
+
+.form-title {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #333;
+  position: relative;
+  z-index: 1;
+}
+
+.section-title {
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.section-title::before {
+  content: '';
+  display: block;
+  width: 4px;
+  height: 1.2em;
+  background: var(--primary-color);
+  border-radius: 2px;
+}
+
+.form-section {
+  margin-bottom: 3rem;
+  animation: slideUp 0.5s ease-out;
+  position: relative;
+  z-index: 1;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+  width: 100%;
+}
+
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem;
+  background: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.checkbox-label:hover {
+  background: #fff;
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.checkbox-label input[type="checkbox"] {
+  accent-color: var(--primary-color);
+  width: 1.2em;
+  height: 1.2em;
+}
+
+.form-actions {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.full-width.glass-btn {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  background: var(--primary-color);
+}
+
+.full-width.glass-btn:hover {
+  box-shadow: 0 4px 15px rgba(211, 47, 47, 0.4);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom Input Styling adjustments for Apply form specific */
+.glass-input {
+  transition: border-color 0.3s, box-shadow 0.3s;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+}
+
+.glass-input:hover {
+  border-color: #bbb;
+}
+
+.glass-input:focus {
+  border-color: var(--primary-color);
+}
+
+textarea.glass-input {
+  resize: vertical;
+  min-height: 100px;
+}

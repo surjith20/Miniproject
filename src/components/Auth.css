@@ -1,0 +1,122 @@
+/* Reusing styles mainly, but defining specific overrides */
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 85vh;
+  padding: 1rem;
+  position: relative;
+}
+
+.auth-container::before {
+  content: '';
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(211, 47, 47, 0.05) 0%, transparent 60%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 3rem 2.5rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(25px);
+  border-radius: 20px;
+}
+
+.auth-card.wide {
+  max-width: 550px;
+}
+
+.auth-title {
+  margin-bottom: 0.5rem;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #333;
+}
+
+.auth-subtitle {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.85rem;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.role-select-group {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.role-card {
+  flex: 1;
+  padding: 1.2rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  transition: all 0.3s;
+  background: #fafafa;
+  position: relative;
+  overflow: hidden;
+}
+
+.role-card:hover {
+  background: rgba(211, 47, 47, 0.03);
+  border-color: rgba(211, 47, 47, 0.3);
+}
+
+.role-card.selected {
+  border-color: var(--primary-color);
+  background: rgba(211, 47, 47, 0.05);
+  box-shadow: 0 4px 10px rgba(211, 47, 47, 0.1);
+}
+
+.role-card input {
+  accent-color: var(--primary-color);
+  width: 1.2em;
+  height: 1.2em;
+}
+
+.role-card span {
+  font-weight: 600;
+  color: #333;
+}
+
+.auth-footer-text {
+  margin-top: 2.5rem;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.auth-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+  margin-left: 0.5rem;
+}
+
+.auth-link:hover {
+  color: #b71c1c;
+  /* Darker red */
+  text-decoration: underline;
+}
