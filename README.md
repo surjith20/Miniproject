@@ -1,6 +1,6 @@
-# Fire Safety Portal - Project Documentation
+# REAL-TIME MONITORING AND EVALUATION SOFTWARE FOR FIRE DEPARTMENT APPLICATIONS
 
-## 📋 Project Overview
+## 📋 Project Overview:
 The **Fire Safety Portal** is a full-stack web application designed to digitize and streamline the Fire Application NOC (No Objection Certificate) process. It serves as a bridge between Applicants (Citizens/Businesses) and the Fire Department (Admins/Officials).
 
 ### Core Functionality
@@ -8,7 +8,7 @@ The **Fire Safety Portal** is a full-stack web application designed to digitize 
 - **Administrators** can view all applications, review details, schedule inspections, and grant or reject approvals.
 - **System** provides automated status updates, inspection scheduling reflection, and PDF report generation.
 
----
+
 
 ## 🏗️ Architecture & Technology Stack
 
@@ -28,7 +28,7 @@ The project follows a **Client-Server Architecture**:
 - **ORM**: Sequelize for database modeling and relationships.
 - **Authentication**: Custom token-based auth (simplified for prototype).
 
----
+
 
 ## 📂 Directory Structure
 
@@ -52,8 +52,69 @@ The project follows a **Client-Server Architecture**:
   - `/api/applications`: CRUD for applications.
   - `/api/inspections`: Scheduling and updates.
 
----
 
+
+## 📁 Final Project Structure (Recommended)
+```
+MiniProject/
+│
+├── backend/
+│   └── backend_flask/
+│       ├── app.py                 # Main Flask app entry
+│       ├── config.py              # App configuration
+│       ├── requirements.txt       # Python dependencies
+│       │
+│       ├── utils/
+│       │   └── db.py               # SQLite DB connection & helpers
+│       │
+│       ├── models/
+│       │   ├── user_model.py
+│       │   ├── application_model.py
+│       │   ├── inspection_model.py
+│       │   └── noc_model.py
+│       │
+│       ├── routes/
+│       │   ├── auth_routes.py
+│       │   ├── application_routes.py
+│       │   ├── inspection_routes.py
+│       │   └── admin_routes.py
+│       │
+│       ├── database.sqlite        # SQLite database
+│       └── test_api.py             # API testing
+│
+├── frontend/
+│   ├── index.html
+│   ├── vite.config.js
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── README.md
+│   │
+│   └── src/
+│       ├── main.jsx
+│       ├── App.jsx
+│       ├── App.css
+│       ├── index.css
+│       ├── api.js                  # Axios / fetch API calls
+│       │
+│       └── components/
+│           ├── Home.jsx
+│           ├── Home.css
+│           ├── Apply.jsx
+│           ├── Apply.css
+│           ├── Status.jsx
+│           ├── Status.css
+│           ├── Admin.jsx
+│           ├── Admin.css
+│           ├── Login.jsx
+│           ├── Login.css
+│           ├── Register.jsx
+│           ├── Auth.css
+│           └── Settings.jsx
+│
+├── README.md
+└── .gitignore
+
+```
 ## 🚀 Setup Instructions
 
 ### Backend Setup
@@ -79,7 +140,6 @@ The project follows a **Client-Server Architecture**:
    ```
 4. Open the browser link provided (e.g., `http://localhost:5173`).
 
----
 
 ## 👥 User Roles & Features
 
@@ -98,7 +158,7 @@ The project follows a **Client-Server Architecture**:
   - **Update Status**: Move applications to "Approved" or "Rejected".
 - **User Management**: View registered users (Admin only).
 
----
+
 
 ## 🔧 backend API Endpoints
 
@@ -111,13 +171,12 @@ The project follows a **Client-Server Architecture**:
 | POST | `/api/inspections` | Schedule an inspection |
 | GET | `/api/inspections` | Get all inspection records |
 
----
+
 
 ## 🎨 Design Theme
 The project uses a **"Fire & Safety"** theme:
 - **Colors**: Primary Red (`#d32f2f`), White, and Glass-like Translucency.
 - **Animations**: Fade-ins and smooth transitions for a premium feel.
 
----
 
 © 2025 Fire Safety Department
