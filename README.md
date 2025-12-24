@@ -180,6 +180,30 @@ The project uses a **"Fire & Safety"** theme:
 
 © 2025 Fire Safety Department
 
+## Output :
+### Step 1: Login & create account
+<img width="1918" height="1078" alt="image" src="https://github.com/user-attachments/assets/4f009377-44c7-4f4b-9d78-1b33526974fc" />
+
+
+<img width="1918" height="1078" alt="image" src="https://github.com/user-attachments/assets/c3984bf6-bc63-4bb0-b856-0bb6aafbb6ad" />
+
+### Step 2: Home page
+<img width="1918" height="1077" alt="image" src="https://github.com/user-attachments/assets/b20edfd9-c573-48af-b274-a949c72f4990" />
+
+### Step 3: Apply Noc
+<img width="1918" height="1077" alt="image" src="https://github.com/user-attachments/assets/0eda8523-63b3-4683-9306-8956fb65d384" />
+
+### Step 4: Appiled for cases
+<img width="1917" height="1077" alt="image" src="https://github.com/user-attachments/assets/280ec5fd-0d28-4a0d-9969-cf24a9aae52d" />
+
+### Step 5 Admin page 
+<img width="1918" height="1078" alt="image" src="https://github.com/user-attachments/assets/0dd8c1ef-e43a-4c65-a033-506a826debd7" />
+
+### Step 6 Inspection of the date in Admin 
+
+<img width="1918" height="1078" alt="image" src="https://github.com/user-attachments/assets/56add3c4-bdda-4496-94d9-4101bc160051" />
+
+
 
 ## RESULT
 The developed Real-Time Monitoring and Evaluation Software for Fire Department Applications successfully meets the objectives of automating fire safety application processing. The system provides a user-friendly web interface that allows applicants to register, submit fire safety NOC applications, and track application status in real time. All application data is securely stored and managed using an SQLite database, ensuring consistency and reliability.
