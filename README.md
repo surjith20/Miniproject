@@ -1,69 +1,123 @@
-# Fire Department Real-Time Monitoring System
+# Fire Safety Portal - Project Documentation
 
-A comprehensive web application with complete user authentication system for streamlining fire safety inspections, NOC applications, and real-time monitoring.
+## 📋 Project Overview
+The **Fire Safety Portal** is a full-stack web application designed to digitize and streamline the Fire Application NOC (No Objection Certificate) process. It serves as a bridge between Applicants (Citizens/Businesses) and the Fire Department (Admins/Officials).
 
-## New Authentication Features Added:
+### Core Functionality
+- **Applicants** can register, submit applications for fire safety certificates, and track their real-time status.
+- **Administrators** can view all applications, review details, schedule inspections, and grant or reject approvals.
+- **System** provides automated status updates, inspection scheduling reflection, and PDF report generation.
 
-### 1. **Login System**
-- Email/password authentication
-- Demo accounts for different roles (Applicant, Official, Admin)
-- Remember me functionality
-- Forgot password option
-- Form validation
-- Loading states
+---
 
-### 2. **Registration System**
-- New user registration with validation
-- Role selection (Applicant, Official)
-- Password strength requirements
-- Terms acceptance
-- Email availability check
-- Demo registration buttons
+## 🏗️ Architecture & Technology Stack
 
-### 3. **User Management**
-- Persistent login with localStorage
-- Role-based access control
-- User profile display
-- Logout functionality
-- Admin user management (for admin role)
+The project follows a **Client-Server Architecture**:
 
-### 4. **Secure Features**
-- Password validation (8+ chars, mixed case, numbers)
-- Form validation with real-time feedback
-- Protected routes based on authentication
-- Session persistence
-- Demo data protection
+### 1. Frontend (Client-Side)
+- **Framework**: React.js (Vite) for fast, component-based UI.
+- **Styling**: Custom CSS with Glassmorphism design principles (transparency, blurs, gradients).
+- **Routing**: React Router DOM v6 for seamless navigation.
+- **State Management**: React `useState` and `useEffect` hooks.
+- **API Communication**: `fetch` API wrapper for backend requests.
 
-## Complete Application Flow:
+### 2. Backend (Server-Side)
+- **Runtime**: Node.js.
+- **Framework**: Express.js for RESTful API routing.
+- **Database**: SQLite (File-based SQL database) for easy setup and portability.
+- **ORM**: Sequelize for database modeling and relationships.
+- **Authentication**: Custom token-based auth (simplified for prototype).
 
-1. **Authentication Flow:**
-   - User visits app → Redirected to login page
-   - Can login with existing credentials or use demo accounts
-   - New users can register with validation
-   - Successful login → Redirected to home page
+---
 
-2. **Role-Based Access:**
-   - **Applicant**: Apply for NOC, Track status
-   - **Official**: All applicant features + Dashboard access
-   - **Admin**: All features + User management
+## 📂 Directory Structure
 
-3. **Protected Routes:**
-   - All main features require authentication
-   - Unauthorized users redirected to login
-   - Role-specific features protected
+### `Frontend/` folder
+- **`src/components/`**: Contains all React UI components.
+  - `Home.jsx`: Main dashboard for users.
+  - `Admin.jsx`: Admin panel for managing cases.
+  - `Apply.jsx`: Form for new applications.
+  - `Status.jsx`: Tracking page with PDF generation.
+  - `Auth/`: Login and Register components.
+- **`src/api.js`**: Centralized API service to talk to the backend.
 
-## Technology Stack
+### `backend/` folder
+- **`server.js`**: Entry point, initializes Express app and syncs Database.
+- **`models/`**: Sequelize database schemas.
+  - `User.js`: Stores user credentials and roles.
+  - `Application.js`: Stores fire NOC application details.
+  - `Inspection.js`: Stores inspection schedules and results.
+- **`routes/`**: API endpoints.
+  - `/api/auth`: Login/Register.
+  - `/api/applications`: CRUD for applications.
+  - `/api/inspections`: Scheduling and updates.
 
-- **Frontend**: React 18 with Vite
-- **Routing**: React Router DOM 6
-- **State Management**: React Hooks (useState, useEffect)
-- **Storage**: localStorage for session persistence
-- **Styling**: CSS Modules with custom design system
-- **Icons**: Emoji and custom CSS icons
-- **Build Tool**: Vite
+---
 
-## Installation
+## 🚀 Setup Instructions
 
-1. **Clone and navigate to project directory:**
-```bash
-cd fire-dept-frontend
+### Backend Setup
+1. Open a terminal in the `backend` folder.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the server (runs on Port 3000):
+   ```bash
+   node server.js
+   ```
+
+### Frontend Setup
+1. Open a **new** terminal in the `Frontend` folder.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the React dev server:
+   ```bash
+   npm run dev
+   ```
+4. Open the browser link provided (e.g., `http://localhost:5173`).
+
+---
+
+## 👥 User Roles & Features
+
+### 👤 Applicant
+- **Sign Up/Login**: Create an account to manage applications.
+- **Apply Now**: Fill out a detailed form (Business Name, Address, Building Height, etc.).
+- **Track Status**: Enter Application ID to see current stage (submitted -> under_review -> inspection -> approved).
+- **View Schedule**: See when an inspector is visiting.
+- **Download Report**: Generate a PDF of the application status.
+
+### 🛡️ Admin / Official
+- **Dashboard**: View key metrics (Total Applications, Pending Cases).
+- **Case Management**:
+  - Review submitted applications.
+  - **Schedule Inspection**: Assign a date for physical verification.
+  - **Update Status**: Move applications to "Approved" or "Rejected".
+- **User Management**: View registered users (Admin only).
+
+---
+
+## 🔧 backend API Endpoints
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | `/api/auth/register` | Create new user |
+| POST | `/api/auth/login` | Authenticate user |
+| GET | `/api/applications` | Get all applications |
+| POST | `/api/applications` | Submit new application |
+| POST | `/api/inspections` | Schedule an inspection |
+| GET | `/api/inspections` | Get all inspection records |
+
+---
+
+## 🎨 Design Theme
+The project uses a **"Fire & Safety"** theme:
+- **Colors**: Primary Red (`#d32f2f`), White, and Glass-like Translucency.
+- **Animations**: Fade-ins and smooth transitions for a premium feel.
+
+---
+
+© 2024 Fire Safety Department
